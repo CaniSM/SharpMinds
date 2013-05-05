@@ -519,6 +519,7 @@
     <Content Include="Content\fonts\PressStyle.ttf" />
     <Content Include="Content\images\patterns\subtle-transparent-bgs\Thumbs.db" />
     <Content Include="Content\sharpminds.less" />
+    <None Include="Properties\PublishProfiles\Sharpminds.dk.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
