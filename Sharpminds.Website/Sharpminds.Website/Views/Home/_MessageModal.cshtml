@@ -1,0 +1,46 @@
+﻿@model Sharpminds.Website.Models.MailModel
+<a id="contactUs" class="btn btn-large btn-inverse" data-target="#contactModal" data-toggle="modal">Contact Us</a>
+@using (Html.BeginForm("_MessageModal", "Home", FormMethod.Post, new { id = "messageModal" }))
+{
+    @Html.ValidationSummary(true)
+    <div id="contactModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="myModalLabel">Contact Us</h3>
+        </div>
+        <div class="modal-body" style="overflow-y: hidden;">
+            <div class="row-fluid">
+                <div class="span12 input-prepend float-left" style="margin-left: 0;">
+                    <span class="add-on"><i class="icon-user"></i></span>
+                    @Html.TextBoxFor(m => m.Name, new { @class = "span6", @type = "text", @placeholder = "Name..." })
+                    <div class="label label-important label-validators">@Html.ValidationMessageFor(m => m.Name)</div>
+                </div>
+
+                <div class="input-prepend span12" style="margin-left: 0;">
+                    <span class="add-on"><i class="icon-phone"></i></span>
+                    @Html.TextBoxFor(m => m.Phone, new { @class = "span6", @type = "tel", @placeholder = "Phone number..." })
+                    <div class="label label-important label-validators" >@Html.ValidationMessageFor(m => m.Phone)</div>
+                </div>
+
+                <div class="input-prepend span12" style="margin-left: 0;">
+                    <span class="add-on"><i class="icon-envelope"></i></span>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "span6", @type = "email", @placeholder = "Email...", @name = "email" })
+                    <div class="label label-important label-validators">@Html.ValidationMessageFor(m => m.Email)</div>
+                </div>
+                <div class="span12" style="margin-left: 0;">
+                    @Html.TextBoxFor(m => m.Subject, new { @class = "span11", @type = "text", @placeholder = "Subject..." })
+                    <div class="label label-important">@Html.ValidationMessageFor(m => m.Subject)</div>
+                </div>
+                <div class="span12" style="margin-left: 0;">
+                    @Html.TextAreaFor(m => m.Message, new { @class = "span11", @type = "text", @style = "resize: none;", @placeholder = "Insert message...", rows = "7" })
+                    <div class="label label-important">@Html.ValidationMessageFor(m => m.Message)</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button aria-hidden="true" class="btn btn-inverse" data-dismiss="modal">Cancel</button>
+            <input class="btn btn-success" type="submit" value="Send Message">
+            <a class="btn btn-link" href="mailto:cani@sharpminds.dk" target="_blank">Send email</a>
+        </div>
+    </div>
+}

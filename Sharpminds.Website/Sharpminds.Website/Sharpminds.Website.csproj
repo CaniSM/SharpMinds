@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,17 +41,65 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.3.0.13117\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.3.0.13117\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.3.0.13117\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.3.0.13117\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.3.0.13117\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.3.0.13117\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.4.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.4.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.1\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Spatial, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.4.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.1\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -66,13 +116,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -114,6 +157,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0.1\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
     <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
@@ -126,46 +172,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
-    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
@@ -177,7 +183,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BootstrapBundleConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\SharpmindsBundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -188,9 +196,211 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\MailModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\patterns\1.png" />
+    <Content Include="Content\images\patterns\10.png" />
+    <Content Include="Content\images\patterns\11.png" />
+    <Content Include="Content\images\patterns\12.png" />
+    <Content Include="Content\images\patterns\13.png" />
+    <Content Include="Content\images\patterns\14.png" />
+    <Content Include="Content\images\patterns\15.png" />
+    <Content Include="Content\images\patterns\16.png" />
+    <Content Include="Content\images\patterns\17.png" />
+    <Content Include="Content\images\patterns\18.png" />
+    <Content Include="Content\images\patterns\19.png" />
+    <Content Include="Content\images\patterns\2.png" />
+    <Content Include="Content\images\patterns\20.png" />
+    <Content Include="Content\images\patterns\3.png" />
+    <Content Include="Content\images\patterns\4.png" />
+    <Content Include="Content\images\patterns\5.png" />
+    <Content Include="Content\images\patterns\6.png" />
+    <Content Include="Content\images\patterns\7.png" />
+    <Content Include="Content\images\patterns\8.png" />
+    <Content Include="Content\images\patterns\9.png" />
+    <Content Include="Content\images\patterns\bs-docs-masthead-pattern.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\45degreee_fabric.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\60degree_gray.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\always_grey.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\argyle.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\batthern.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\beige_paper.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\bgnoise_lg.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\black-Linen.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\blackmamba.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\black_denim.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\black_linen_v2.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\black_paper.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\black_scales.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\black_thread.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\bright_squares.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\broken_noise.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\brushed_alu.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\brushed_alu_dark.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\candyhole.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\carbon_fibre.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\carbon_fibre_big.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\carbon_fibre_v2.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\cardboard.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\checkered_pattern.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\circles.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\classy_fabric.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\concrete_wall.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\concrete_wall_2.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\concrete_wall_3.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\connect.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\cork_1.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\crissXcross.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\crossed_stripes.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\crosses.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\cubes.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\darkdenim3.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\dark_brick_wall.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\dark_circles.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\dark_leather.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\dark_matter.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\dark_mosaic.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\dark_stripes.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\dark_wood.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\darth_stripe.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\denim.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\diagmonds.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\diagonal-noise.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\diagonal_striped_brick.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\diamonds.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\double_lined.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\dvsup.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\elastoplast.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\elegant_grid.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\exclusive_paper.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\fabric_1.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\fabric_plaid.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\fake_brick.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\fancy_deboss.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\felt.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\flowers.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\foggy_birds.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\foil.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\gold_scale.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\graphy.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\gray_sand.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\green-fibers.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\green_dust_scratch.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\green_gobbler.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\gridme.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\grilled.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\groovepaper.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\grunge_wall.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\gun_metal.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\handmadepaper.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\hexellence.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\hixs_pattern_evolution.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\inflicted.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\irongrip.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\knitted-netting.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\kuji.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\leather_1.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\lghtmesh.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\light_alu.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\light_checkered_tiles.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\light_grey_floral_motif.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\light_honeycomb.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\lined_paper.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\littleknobs.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\little_pluses.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\merely_cubed.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\micro_carbon.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\mirrored_squares.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\nami.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\noise_pattern_with_crosslines.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\noisy.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\old_mathematics.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\old_wall.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\padded.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\paper_1.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\paper_2.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\paper_3.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\paven.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\pineapplecut.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\pinstripe.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\plaid.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\polaroid.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\pool_table.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\project_papper.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\px_by_Gre3g.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\random_grey_variations.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\ravenna.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\real_cf.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\ricepaper.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\ricepaper2.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\rockywall.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\roughcloth.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\rubber_grip.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\silver_scales.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\small-crackle-bright.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\small_tiles.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\smooth_wall.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\soft_circle_scales.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\soft_pad.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\soft_wallpaper.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\squares.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\square_bg.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\starring.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\struckaxiom.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\stucco.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\subtle_freckles.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\subtle_orange_emboss.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\tactile_noise.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\texturetastic_gray.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\triangles.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\type.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\vertical_cloth.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\vichy.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\washi.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\wavecut.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\whitediamond.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\whitey.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\white_brick_wall.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\white_carbon.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\white_paperboard.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\white_plaster.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\white_sand.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\white_texture.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\wood_1.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\wood_pattern.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\wood_pattern_trans.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\worn_dots.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\woven.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\xv.png" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\zigzag.png" />
+    <Content Include="Content\less\bootstrap.css">
+      <DependentUpon>bootstrap.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\bootstrap.min.css">
+      <DependentUpon>bootstrap.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\font-awesome.css">
+      <DependentUpon>font-awesome.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\font-awesome.min.css">
+      <DependentUpon>font-awesome.less</DependentUpon>
+    </Content>
+    <Content Include="Content\sharpminds.css">
+      <DependentUpon>sharpminds.less</DependentUpon>
+    </Content>
+    <Content Include="Content\sharpminds.min.css">
+      <DependentUpon>sharpminds.less</DependentUpon>
+    </Content>
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -213,12 +423,16 @@
     <Content Include="Content\themes\base\jquery.ui.core.css" />
     <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
     <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
     <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
     <Content Include="Content\themes\base\jquery.ui.resizable.css" />
     <Content Include="Content\themes\base\jquery.ui.selectable.css" />
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -239,29 +453,93 @@
     <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Content\less\wells.less" />
+    <Content Include="Content\less\variables.less" />
+    <Content Include="Content\less\utilities.less" />
+    <Content Include="Content\less\type.less" />
+    <Content Include="Content\less\tooltip.less" />
+    <Content Include="Content\less\thumbnails.less" />
+    <Content Include="Content\less\tables.less" />
+    <Content Include="Content\less\sprites.less" />
+    <Content Include="Content\less\scaffolding.less" />
+    <Content Include="Content\less\responsive-utilities.less" />
+    <Content Include="Content\less\responsive-navbar.less" />
+    <Content Include="Content\less\responsive-768px-979px.less" />
+    <Content Include="Content\less\responsive-767px-max.less" />
+    <Content Include="Content\less\responsive-1200px-min.less" />
+    <Content Include="Content\less\responsive.less" />
+    <Content Include="Content\less\reset.less" />
+    <Content Include="Content\less\progress-bars.less" />
+    <Content Include="Content\less\popovers.less" />
+    <Content Include="Content\less\pagination.less" />
+    <Content Include="Content\less\pager.less" />
+    <Content Include="Content\less\navs.less" />
+    <Content Include="Content\less\navbar.less" />
+    <Content Include="Content\less\modals.less" />
+    <Content Include="Content\less\mixins.less" />
+    <Content Include="Content\less\media.less" />
+    <Content Include="Content\less\layouts.less" />
+    <Content Include="Content\less\labels-badges.less" />
+    <Content Include="Content\less\hero-unit.less" />
+    <Content Include="Content\less\grid.less" />
+    <Content Include="Content\less\forms.less" />
+    <Content Include="Content\less\dropdowns.less" />
+    <Content Include="Content\less\component-animations.less" />
+    <Content Include="Content\less\code.less" />
+    <Content Include="Content\less\close.less" />
+    <Content Include="Content\less\carousel.less" />
+    <Content Include="Content\less\buttons.less" />
+    <Content Include="Content\less\button-groups.less" />
+    <Content Include="Content\less\breadcrumbs.less" />
+    <Content Include="Content\less\bootstrap.less" />
+    <Content Include="Content\less\alerts.less" />
+    <Content Include="Content\less\accordion.less" />
+    <Content Include="Content\less\font-awesome-ie7.less" />
+    <Content Include="Content\less\font-awesome.less" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\FontAwesome.otf" />
+    <Content Include="Content\fonts\Designosaur-Italic.ttf" />
+    <Content Include="Content\fonts\Designosaur-Regular.ttf" />
+    <Content Include="Content\fonts\LEVIBRUSH.TTF" />
+    <Content Include="Content\fonts\Lighthouse_PersonalUse.ttf" />
+    <Content Include="Content\fonts\OneDirection.ttf" />
+    <Content Include="Content\fonts\PressStyle.ttf" />
+    <Content Include="Content\images\patterns\subtle-transparent-bgs\Thumbs.db" />
+    <Content Include="Content\sharpminds.less" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\jquery-ui-1.10.2.js" />
+    <Content Include="Scripts\jquery-ui-1.10.2.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.2.0.debug.js" />
-    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\knockout-2.2.1.debug.js" />
+    <Content Include="Scripts\knockout-2.2.1.js" />
+    <Content Include="Scripts\less.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\SharpMinds\sharpminds-preload.js" />
+    <Content Include="Scripts\SharpMinds\sharpminds.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -301,6 +579,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\_MessageModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -336,6 +615,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
