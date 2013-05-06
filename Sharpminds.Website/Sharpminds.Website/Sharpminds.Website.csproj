@@ -204,7 +204,12 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\docs.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\images\carousel\12.jpg" />
+    <Content Include="Content\images\carousel\unwxm.jpg" />
+    <Content Include="Content\images\carousel\uY0Xa.jpg" />
+    <Content Include="Content\images\carousel\vPXFz.jpg" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\patterns\1.png" />
@@ -394,6 +399,9 @@
     <Content Include="Content\less\font-awesome.min.css">
       <DependentUpon>font-awesome.less</DependentUpon>
     </Content>
+    <Content Include="Content\Promotion\agilepicture.jpg" />
+    <Content Include="Content\Promotion\HTML5_Badge.svg" />
+    <Content Include="Content\Promotion\webdesign.jpg" />
     <Content Include="Content\sharpminds.css">
       <DependentUpon>sharpminds.less</DependentUpon>
     </Content>
@@ -581,6 +589,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\_MessageModal.cshtml" />
+    <Content Include="Views\Home\_Promotion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

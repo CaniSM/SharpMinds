@@ -22,6 +22,11 @@ namespace Sharpminds.Website.Controllers
             return View();
         }
 
+        public ActionResult _Promotion()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult _MessageModal(MailModel mailModel)
         {

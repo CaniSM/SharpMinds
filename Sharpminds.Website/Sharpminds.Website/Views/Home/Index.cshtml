@@ -6,6 +6,7 @@
 }
 
 @section featured {
+
     <![if !IE]>
         <script>
             $(function () {
@@ -13,13 +14,13 @@
             });
         </script>
     <![endif]>
-    <div class="banner">
+    <div class="jumbotron masthead banner">
         <div class="container">
             <h1 class="text-left">#Minds</h1>
             <hr class="style-six" />
             <p class="text-left">IT Consultancy, webdesign, and solid back to front-end web development.</p>
             <hr class="style-six" />
-            @Html.Partial("_MessageModal", Model)
+            <a id="contactUs" class="btn btn-large btn-inverse" data-target="#contactModal" data-toggle="modal">Contact Us</a>
             <div class="alert alert-block alert-error fade in" id="alert_button">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <h4>LIFE THREATENING DANGER</h4>
@@ -30,9 +31,13 @@
             </div>
         </div>
     </div>
+    @Html.Partial("_MessageModal", Model)
 }
+
+
 <div class="clear-fix" style="text-align: center;">
-    <h4 class="badge">We're just getting ready - More to come soon!</h4>
+    <h4 class="badge badge-info">We're just getting ready - More coming soon!</h4>
+    @Html.Partial("_Promotion")
 </div>
 
 @section Scripts {

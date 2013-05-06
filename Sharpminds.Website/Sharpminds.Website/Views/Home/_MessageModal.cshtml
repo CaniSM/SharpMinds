@@ -1,5 +1,5 @@
 ﻿@model Sharpminds.Website.Models.MailModel
-<a id="contactUs" class="btn btn-large btn-inverse" data-target="#contactModal" data-toggle="modal">Contact Us</a>
+
 @using (Html.BeginForm("_MessageModal", "Home", FormMethod.Post, new { id = "messageModal" }))
 {
     @Html.ValidationSummary(true)
@@ -21,7 +21,6 @@
                     @Html.TextBoxFor(m => m.Phone, new { @class = "span6", @type = "tel", @placeholder = "Phone number..." })
                     <div class="label label-important label-validators" >@Html.ValidationMessageFor(m => m.Phone)</div>
                 </div>
-
                 <div class="input-prepend span12" style="margin-left: 0;">
                     <span class="add-on"><i class="icon-envelope"></i></span>
                     @Html.TextBoxFor(m => m.Email, new { @class = "span6", @type = "email", @placeholder = "Email...", @name = "email" })
