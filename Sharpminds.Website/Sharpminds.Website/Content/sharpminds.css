@@ -45,7 +45,6 @@ footer {
   padding-bottom: 0px;
 }
 .banner {
-  height: 450px;
   padding-top: 150px;
   /*
     @patternUrl: url(images/patterns/subtle-transparent-bgs/wood_pattern.png);
@@ -102,6 +101,9 @@ footer {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
   font-size: 40px;
   line-height: 50px;
+}
+.banner .container > a {
+  margin: 60px;
 }
 .banner .container form {
   text-align: start;
@@ -169,50 +171,6 @@ hr.style-six {
 .navbar a:hover {
   background: none;
 }
-/* RESPONSIVE DESIGN */
-/* Large desktop */
-@media (min-width: 1200px) {
-  
-}
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-  
-}
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-  .banner {
-    height: 450px;
-    padding-top: 50px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-/* Landscape phones and down */
-@media (max-width: 480px) {
-  body {
-    border-top: 0;
-  }
-  #body {
-    background-color: #fff;
-    clear: both;
-    padding-bottom: 35px;
-  }
-  .banner {
-    height: 300px;
-    padding-top: 50px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .banner h1 {
-    letter-spacing: 10px;
-    font-size: 70px;
-    line-height: 100px;
-  }
-  .banner p {
-    font-size: 15px;
-    line-height: 15px;
-  }
-}
 .label-validators {
   position: relative;
   top: 7px;
@@ -251,6 +209,69 @@ hr.style-six {
   padding-bottom: 20px;
 }
 .container .promotion .competence .header img {
-  /*max-width: 300px;*/
-
+  max-height: 200px;
+}
+/* RESPONSIVE DESIGN */
+/* Large desktop */
+@media (min-width: 1200px) {
+  
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .banner {
+    padding-top: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .banner .container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .banner .container > h1 {
+    letter-spacing: 10px;
+    font-size: 100px;
+    line-height: 100px;
+  }
+  .banner .container p {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .banner .container > a {
+    margin: 35px;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  body {
+    border-top: 0;
+  }
+  #body {
+    background-color: #fff;
+    clear: both;
+    padding-bottom: 35px;
+  }
+  .banner {
+    padding-top: 80px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .banner .container > h1 {
+    letter-spacing: 10px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .banner .container p {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .banner .container > a {
+    margin: 25px;
+  }
+  .badge {
+    white-space: normal;
+  }
 }
