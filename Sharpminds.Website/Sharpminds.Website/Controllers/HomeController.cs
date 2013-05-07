@@ -83,5 +83,9 @@ namespace Sharpminds.Website.Controllers
 
         #endregion
 
+        public ActionResult Customers()
+        {
+            return View();
+        }
     }
 }
