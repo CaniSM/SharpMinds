@@ -526,7 +526,6 @@
     <Content Include="Content\fonts\Lighthouse_PersonalUse.ttf" />
     <Content Include="Content\fonts\OneDirection.ttf" />
     <Content Include="Content\fonts\PressStyle.ttf" />
-    <Content Include="Content\images\patterns\subtle-transparent-bgs\Thumbs.db" />
     <Content Include="Content\sharpminds.less" />
     <None Include="Properties\PublishProfiles\Sharpminds.dk.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
