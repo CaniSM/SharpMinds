@@ -527,6 +527,7 @@
     <Content Include="Content\fonts\OneDirection.ttf" />
     <Content Include="Content\fonts\PressStyle.ttf" />
     <Content Include="Content\sharpminds.less" />
+    <Content Include="Content\sharpminds.scss" />
     <None Include="Properties\PublishProfiles\Sharpminds.dk.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
