@@ -388,27 +388,10 @@
     <Content Include="Content\images\patterns\subtle-transparent-bgs\woven.png" />
     <Content Include="Content\images\patterns\subtle-transparent-bgs\xv.png" />
     <Content Include="Content\images\patterns\subtle-transparent-bgs\zigzag.png" />
-    <Content Include="Content\less\bootstrap.css">
-      <DependentUpon>bootstrap.less</DependentUpon>
-    </Content>
-    <Content Include="Content\less\bootstrap.min.css">
-      <DependentUpon>bootstrap.less</DependentUpon>
-    </Content>
-    <Content Include="Content\less\font-awesome.css">
-      <DependentUpon>font-awesome.less</DependentUpon>
-    </Content>
-    <Content Include="Content\less\font-awesome.min.css">
-      <DependentUpon>font-awesome.less</DependentUpon>
-    </Content>
     <Content Include="Content\Promotion\agilepicture.jpg" />
     <Content Include="Content\Promotion\HTML5_Badge.svg" />
     <Content Include="Content\Promotion\webdesign.jpg" />
-    <Content Include="Content\sharpminds.css">
-      <DependentUpon>sharpminds.less</DependentUpon>
-    </Content>
-    <Content Include="Content\sharpminds.min.css">
-      <DependentUpon>sharpminds.less</DependentUpon>
-    </Content>
+    <Content Include="Content\sharpminds.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -473,49 +456,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\less\wells.less" />
-    <Content Include="Content\less\variables.less" />
-    <Content Include="Content\less\utilities.less" />
-    <Content Include="Content\less\type.less" />
-    <Content Include="Content\less\tooltip.less" />
-    <Content Include="Content\less\thumbnails.less" />
-    <Content Include="Content\less\tables.less" />
-    <Content Include="Content\less\sprites.less" />
-    <Content Include="Content\less\scaffolding.less" />
-    <Content Include="Content\less\responsive-utilities.less" />
-    <Content Include="Content\less\responsive-navbar.less" />
-    <Content Include="Content\less\responsive-768px-979px.less" />
-    <Content Include="Content\less\responsive-767px-max.less" />
-    <Content Include="Content\less\responsive-1200px-min.less" />
-    <Content Include="Content\less\responsive.less" />
-    <Content Include="Content\less\reset.less" />
-    <Content Include="Content\less\progress-bars.less" />
-    <Content Include="Content\less\popovers.less" />
-    <Content Include="Content\less\pagination.less" />
-    <Content Include="Content\less\pager.less" />
-    <Content Include="Content\less\navs.less" />
-    <Content Include="Content\less\navbar.less" />
-    <Content Include="Content\less\modals.less" />
-    <Content Include="Content\less\mixins.less" />
-    <Content Include="Content\less\media.less" />
-    <Content Include="Content\less\layouts.less" />
-    <Content Include="Content\less\labels-badges.less" />
-    <Content Include="Content\less\hero-unit.less" />
-    <Content Include="Content\less\grid.less" />
-    <Content Include="Content\less\forms.less" />
-    <Content Include="Content\less\dropdowns.less" />
-    <Content Include="Content\less\component-animations.less" />
-    <Content Include="Content\less\code.less" />
-    <Content Include="Content\less\close.less" />
-    <Content Include="Content\less\carousel.less" />
-    <Content Include="Content\less\buttons.less" />
-    <Content Include="Content\less\button-groups.less" />
-    <Content Include="Content\less\breadcrumbs.less" />
-    <Content Include="Content\less\bootstrap.less" />
-    <Content Include="Content\less\alerts.less" />
-    <Content Include="Content\less\accordion.less" />
-    <Content Include="Content\less\font-awesome-ie7.less" />
-    <Content Include="Content\less\font-awesome.less" />
     <Content Include="Content\font\fontawesome-webfont.woff" />
     <Content Include="Content\font\fontawesome-webfont.ttf" />
     <Content Include="Content\font\fontawesome-webfont.eot" />
@@ -526,7 +466,6 @@
     <Content Include="Content\fonts\Lighthouse_PersonalUse.ttf" />
     <Content Include="Content\fonts\OneDirection.ttf" />
     <Content Include="Content\fonts\PressStyle.ttf" />
-    <Content Include="Content\sharpminds.less" />
     <Content Include="Content\sharpminds.scss" />
     <None Include="Properties\PublishProfiles\Sharpminds.dk.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
