@@ -15,9 +15,8 @@
                     @Html.TextBoxFor(m => m.Name, new { @class = "span6", @type = "text", @placeholder = "Name..." })
                     <div class="label label-important label-validators">@Html.ValidationMessageFor(m => m.Name)</div>
                 </div>
-
                 <div class="input-prepend span12" style="margin-left: 0;">
-                    <span class="add-on"><i class="icon-phone"></i></span>
+                    <span class="add-on"><i class="fa-phone"></i></span>
                     @Html.TextBoxFor(m => m.Phone, new { @class = "span6", @type = "tel", @placeholder = "Phone number..." })
                     <div class="label label-important label-validators">@Html.ValidationMessageFor(m => m.Phone)</div>
                 </div>
@@ -39,7 +38,7 @@
         <div class="modal-footer">
             <button aria-hidden="true" class="btn btn-inverse" data-dismiss="modal">Cancel</button>
             <input class="btn btn-success" type="submit" value="Send Message">
-            <a class="btn btn-link" href="mailto:cani@sharpminds.dk" target="_blank"><i class="icon-envelope-alt"></i> Send E-mail</a>
+            <a class="btn btn-link" href="mailto:cani@sharpminds.dk" target="_blank"><i class="icon-envelope"></i> Send E-mail</a>
         </div>
     </div>
 }
